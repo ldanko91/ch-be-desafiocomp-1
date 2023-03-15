@@ -1,0 +1,30 @@
+<script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+    integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+
+<h1>{{titulo}}</h1>
+
+<h2>Eliminar un producto</h2>
+<form id="delForm">
+    <input id="delID" type="text" placeholder="Ingrese ID a eliminar">
+    <button id="delSubmit" type="submit"> ENVIAR </button>
+</form>
+
+
+<h2>Agregar un producto</h2>
+<form id="addProdForm">
+    <input id="addProdTitle" type="text" placeholder="Nombre del nuevo producto">
+    <input id="addProdDesc" type="text" placeholder="Descripción">
+    <input id="addProdPrice" type="number" placeholder="Precio">
+    <input id="addProdCode" type="text" placeholder="Código">
+    <input id="addProdStock" type="number" placeholder="Stock">
+    <input id="addProdCat" type="text" placeholder="Categoría">
+    <input id="addProdThumb" type="text" placeholder="URL de imagen">
+    <button id="addSubmit" type="submit"> ENVIAR </button>
+</form>
+
+{{#each products}}
+<div id="prodsRender">
+</div>
+{{/each}}
